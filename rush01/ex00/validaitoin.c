@@ -1,7 +1,17 @@
-
-int valid_ltor(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validaitoin.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amismail <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/22 14:54:14 by amismail          #+#    #+#             */
+/*   Updated: 2024/06/22 14:56:36 by amismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+int	valid_ltor(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 {
-    int	i;
+	int	i;
 	int	highest;
 	int	count;
 
@@ -25,7 +35,7 @@ int valid_ltor(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 	return (0);
 }
 
-int valid_rtol(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
+int	valid_rtol(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 {
 	int	i;
 	int	highest;
@@ -49,7 +59,7 @@ int valid_rtol(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 	return (0);
 }
 
-int valid_uptod(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
+int	valid_uptod(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 {
 	int	i;
 	int	highest;
@@ -75,7 +85,7 @@ int valid_uptod(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 	return (0);
 }
 
-int valid_dtoup(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
+int	valid_dtoup(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 {
 	int	i;
 	int	highest;
@@ -98,4 +108,3 @@ int valid_dtoup(int check, int header[4][4], int ans_arr[4][4], int *v_arr)
 		return (1);
 	return (0);
 }
-

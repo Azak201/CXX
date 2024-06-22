@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amismail <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/22 14:35:13 by amismail          #+#    #+#             */
+/*   Updated: 2024/06/22 14:37:19 by amismail         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <stdio.h>
 #include <unistd.h>
 
@@ -24,7 +35,7 @@ int	input_toint(char *arr, int number[4][4])
 	added = 0;
 	while (arr[count] != '\0')
 	{
-		if ((arr[count] == ' '))
+		if (arr[count] == ' ')
 			count++;
 		if ((arr[count] >= '1' && arr[count] <= '4'))
 		{
@@ -48,9 +59,9 @@ int	main(int argc, char **argv)
 
 	i = -1;
 	j = -1;
-	while (++i<4)
-		while(++j <4)
-			headers[i][j]=0;
+	while (++i < 4)
+		while (++j < 4)
+			headers[i][j] = 0;
 	if (argc == 2)
 	{
 		if (input_toint(argv[1], headers) != 1)
@@ -60,7 +71,7 @@ int	main(int argc, char **argv)
 		}
 		solve(headers);
 	}
-else
+	else
 		write (1, "error\n", 6);
 	return (0);
 }
