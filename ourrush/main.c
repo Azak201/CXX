@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int	solve(int *head);
+int	solve(int head[4][4]);
 
-void	cond(int *added, int *j)
+void	cond(int *added, int *i)
 {
 	*added = *added + 1;
 	if (*added == 4)
 	{
 		*added = 0;
-		*j = *j + 1;
+		*i = *i + 1;
 	}
 }
 
@@ -17,25 +17,25 @@ int	input_toint(char *arr, int number[4][4])
 {
 	int	count;
 	int	added;
-	int	j;
+	int	i;
 
 	count = 0;
-	j = 0;
+	i = 0;
 	added = 0;
-	while (arr[count] != 0)
+	while (arr[count] != '\0')
 	{
-		if ((arr[count] == 32))
+		if ((arr[count] == ' '))
 			count++;
-		if ((arr[count] != '\0') && (arr[count] >= '1' && arr[count] <= '4'))
+		if ((arr[count] >= '1' && arr[count] <= '4'))
 		{
-			number[j][added] = arr[count] - 48;
-			cond(&added, &j);
+			number[i][added] = arr[count] - 48;
+			cond(&added, &i);
 			count++;
 		}
 		else
 			count ++;
 	}
-	if (j == 4 && added == 0)
+	if (i == 4 && added == 0)
 		return (1);
 	return (0);
 }
@@ -43,7 +43,14 @@ int	input_toint(char *arr, int number[4][4])
 int	main(int argc, char **argv)
 {
 	int	headers[4][4];
+	int	i;
+	int	j;
 
+	i = -1;
+	j = -1;
+	while (++i<4)
+		while(++j <4)
+			headers[i][j]=0;
 	if (argc == 2)
 	{
 		if (input_toint(argv[1], headers) != 1)
@@ -53,7 +60,7 @@ int	main(int argc, char **argv)
 		}
 		solve(headers);
 	}
-	else
+else
 		write (1, "error\n", 6);
 	return (0);
 }
