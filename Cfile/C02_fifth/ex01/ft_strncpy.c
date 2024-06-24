@@ -6,7 +6,7 @@
 /*   By: amismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:04:43 by amismail          #+#    #+#             */
-/*   Updated: 2024/06/20 19:19:24 by amismail         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:02:24 by amismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
@@ -25,10 +25,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	while (i < nu)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[i] = 0;
+		i ++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
 
