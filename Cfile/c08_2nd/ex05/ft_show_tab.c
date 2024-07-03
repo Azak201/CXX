@@ -6,7 +6,7 @@
 /*   By: amismail <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:05:12 by amismail          #+#    #+#             */
-/*   Updated: 2024/07/01 16:34:48 by amismail         ###   ########.fr       */
+/*   Updated: 2024/07/02 15:17:22 by amismail         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_stock_str.h"
@@ -52,7 +52,7 @@ void	ft_show_tab(struct s_stock_str *par)
 	int	i;
 
 	i = 0;
-	while (par[i].str == 0)
+	while (par[i].str != 0)
 	{
 		ft_putstr (par[i].str);
 		write (1, "\n", 1);
